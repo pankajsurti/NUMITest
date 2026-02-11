@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to IIS Express",
+            "type": "clr",
+            "request": "attach",
+            "processName": "iisexpress.exe",
+            "preLaunchTask": "start-iisexpress"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run & Debug (IIS Express)",
+            "configurations": ["Attach to IIS Express"],
+            "preLaunchTask": "build-and-start-iisexpress",
+            "stopAll": true
+        }
+    ]
+}
