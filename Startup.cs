@@ -18,7 +18,7 @@ namespace NUMITest
         // Entra ID configuration from Web.config
         private static string ClientId => ConfigurationManager.AppSettings["ida:ClientId"];
         private static string TenantId => ConfigurationManager.AppSettings["ida:TenantId"];
-        private static string ClientSecret => ConfigurationManager.AppSettings["ida:ClientSecret"];
+        //private static string ClientSecret => ConfigurationManager.AppSettings["ida:ClientSecret"];
         private static string RedirectUri => ConfigurationManager.AppSettings["ida:RedirectUri"];
         private static string PostLogoutRedirectUri => ConfigurationManager.AppSettings["ida:PostLogoutRedirectUri"];
         private static string Authority => $"https://login.microsoftonline.com/{TenantId}/v2.0";
@@ -40,7 +40,7 @@ namespace NUMITest
             app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
             {
                 ClientId = ClientId,
-                ClientSecret = ClientSecret,
+                //ClientSecret = ClientSecret,
                 Authority = Authority,
                 RedirectUri = RedirectUri,
                 PostLogoutRedirectUri = PostLogoutRedirectUri,
