@@ -54,7 +54,7 @@
         {
             "label": "start-iisexpress",
             "type": "shell",
-            "command": "& '${env:ProgramFiles}\\IIS Express\\iisexpress.exe' /path:'${workspaceFolder}' /port:44300 /clr:v4.0",
+            "command": "& '${env:ProgramFiles}\\IIS Express\\iisexpress.exe' /path:'${workspaceFolder}' /port:44300 /clr:v4.0 /trace:info",
             "isBackground": true,
             "problemMatcher": {
                 "pattern": {
